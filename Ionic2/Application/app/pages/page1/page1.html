@@ -3,15 +3,22 @@
 </ion-navbar>
 
 <ion-content padding class="page1">
-  <h2>Welcome to Ionic!</h2>
+ <div>
+  <h2>{{myShared.name}}</h2>
   <p>
     This starter project comes with simple tabs-based layout for apps
     that are going to primarily use a Tabbed UI.
   </p>
+  
+  <ul>
+    <li *ngFor="#page of pages">{{ page }}</li>
+  </ul>
+  
+  {{value}}
+  
   <p>
     Take a look at the <code>app/</code> directory to add or change tabs,
     update any existing page or create new pages.
   </p>
-  <opf-slider-money title="Monies" money="75"> </opf-slider-money>
-  <opf-slider-interest title="Interests" interest="5"> </opf-slider-interest>
+ </div>
 </ion-content>
